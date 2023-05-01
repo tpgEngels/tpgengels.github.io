@@ -87,7 +87,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="http://davidbau.com/encode/seedrandom.js"></script>
     
     <script>
     let ctx = document.getElementById('mychart');
@@ -96,8 +95,6 @@
     const up = (ctx, value) => ctx.p0.parsed.y < ctx.p1.parsed.y ? value : undefined;
 
 
-
-    Math.seedrandom('any string you like');
     let container = document.getElementById("container")
     
     let r = 250;
