@@ -5,7 +5,7 @@ class Interactive {
         this.choiceList = ["l", "dist", "routing"]
         this.outcome = "ET_W"
         this.df = null
-        d3.csv('results_1_100.0.csv', function (row) {
+        d3.csv('./results_1_100.0.csv', function (row) {
             Object.keys(row).forEach(function (key) {
                 if (key !== 'dist' && key !== 'routing') {
                     row[key] = parseFloat(row[key]);
