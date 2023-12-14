@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .container {
+      position: relative;
+      overflow: visible;
+    }
+
+    .warehouse {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border: 2px solid black;
+      margin: 50px 50px;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .vline {
+      position: absolute;
+      height: 100%;
+      width: 0px;
+      border: 1px solid red;
+      top: 0;
+      left: 0;
+      z-index: 0
+    }
+
+    .hline {
+      position: absolute;
+      height: 0px;
+      width: 100%;
+      border: 1px solid red;
+      top: 0;
+      left: 0;
+      z-index: 0
+    }
+
+    .button-container {
+      position: absolute;
+      left: 10px;
+      /* transform: translateX(-50%); */
+      display: flex;
+      gap: 10px;
+    }
+
+    .button {
+      padding: 10px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div id="warehouse" class="warehouse">
+    </div>
+    <div class="button-container">
+      <button class="button" , id="routebutton">New Route</button>
+      <button class="button" id="orderbutton">New Order</button>
+    </div>
+  </div>

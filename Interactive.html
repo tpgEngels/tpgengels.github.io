@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Plot with Chart.js</title>
+</head>
+
+<body>
+
+    <label for="parameterDropdown">Select Parameter:</label>
+    <select id="parameterDropdown"></select>
+
+    <label for="outcomeDropdown">Select Outcome:</label>
+    <select id="outcomeDropdown"></select>
+
+    <canvas id="plot"></canvas>
+
+    <div id="filterDropdowns">
+        <!-- Dropdowns for each filter -->
+        <div id="filterDropdown1">
+            <label for="filter1Dropdown">Select value of l parameter:</label>
+            <select id="filter1Dropdown"></select>
+        </div>
+
+        <div id="filterDropdown2">
+            <label for="filter2Dropdown">Select value of dist parameter:</label>
+            <select id="filter2Dropdown"></select>
+        </div>
+
+        <div id="filterDropdown3">
+            <label for="filter3Dropdown">Select value of routing parameter:</label>
+            <select id="filter3Dropdown"></select>
+        </div>
+    </div>
+</body>
+
+</html>

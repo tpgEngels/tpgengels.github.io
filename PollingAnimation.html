@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+    <style>
+        .container{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            margin: 10px auto;
+        }
+
+        .server {
+            height: 20px;
+            width: 20px;
+            background-color: rgb(179, 38, 38);
+            border-radius:50%;
+            position: absolute;
+            top: 500px;
+            left: 250px;
+            z-index: 2;
+        }
+
+        .container #pollingCircle{
+          height: 500px;
+          width: 500px;
+          background-color: #ffffff;
+          /* border-color: #000000;
+          border-width: 10px; */
+          border-radius: 50%;
+          border: 5px solid black;
+          position: absolute;
+          display: inline-block;
+          top:5px;
+          left:5px;
+          z-index: 1;
+        }
+
+        .container #mychart{
+          height: 500px;
+          width: 500px;
+          z-index: 1;
+        }
+
+        .job{
+            height: 15px;
+            width: 15px;
+            background-color: rgb(50, 179, 38);
+            position: absolute;
+            z-index: 3;
+        }
+    </style>
+
+    <body>
+
+        <div style="text-align:center;overflow:hidden; min-width: 100px;" id = "plot">
+                <h1>Polling Model</h1>
+        </div>
+
+        <div  style = "float: left;text-align:center; min-width: 500px">
+            <button type="button" onclick = NextEvent()><img src="https://img.icons8.com/ios/50/null/end--v1.png"/></button> 
+            <button type="button" onclick = PlayAnimation()><img src="https://img.icons8.com/ios/50/null/play--v1.png"/></button>
+            <button type="button" onclick = PauseAnimation()><img src="https://img.icons8.com/ios/50/null/pause--v1.png"/></button> 
+            <div class = "container", id = "container">
+                <div id = "pollingCircle"></div>
+            </div>
+        </div>
+
+        <div style = "position:relative;min-width: 500px; top: 50px">
+            <table style="font-size:14px; font-family: Raleway; ">
+                <tr>
+                    <td> Number of servers: clockwise </td> 
+                    <td> <input style="position:relative;top:3px;width:70px;" type="number"  id="clockwise" value="1" step="1" min="0", onchange = "changeClockwise(this.value)"></td>
+                </tr>
+                <tr>
+                    <td> Number of servers: counter-clockwise </td>
+                    <td> <input style="position:relative;top:3px;width:70px;" type="number"  id="counter-clockwise" value="1" step="1" min="0", onchange = "changecounterClockwise(this.value)"></td>
+                </tr>
+                <tr>
+                    <td> Average servicetime </td>
+                    <td> <input style="position:relative;top:3px;width:70px;" type="number" id="serviceTime" value="1" step="0.25" min="0.25", onchange = "changeService(this.value)"></td>
+                </tr>
+            </table>
+        </div>
+        <div style = "position:relative; top: 50px" class = "container", id = "container">
+            <canvas id = "mychart"></canvas>
+        </div>
+    </body>
+      
+</html>
