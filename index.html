@@ -49,7 +49,7 @@
             }
             container.innerHTML = '';
 
-            const url = `${environment}.html`;
+            const url = `./${environment}.html`;
             // Load the environment content
             fetch(url)
                 .then(response => response.text())
@@ -58,7 +58,7 @@
 
                     // Load external script for the environment
                     const script = document.createElement('script');
-                    script.src = `${environment}.js`;
+                    script.src = `./${environment}.js`;
                     document.head.appendChild(script);
 
                     currentScript = script
